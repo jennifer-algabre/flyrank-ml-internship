@@ -61,3 +61,28 @@ A Random Forest classifier was selected because it can model non-linear relation
 ### Validation
 
 An 80/20 stratified train-test split was used to preserve the class distribution between training and testing data. Additional validation considered potential feature leakage by excluding outcome-derived variables such as `trend_pct`. Model claims are presented as observed predictive performance rather than evidence of causal relationships.
+
+## Results
+
+The Random Forest classifier was evaluated against the Week 4 rule-based baseline using the same dataset and evaluation workflow. While the baseline relied on manually defined search performance rules, the Random Forest model learned patterns across multiple features simultaneously.
+
+The machine learning model demonstrated stronger predictive capability than the rule-based approach by combining several observable search performance signals rather than relying on a single threshold. The model is intended to rank pages for review rather than replace human decision-making.
+
+### Model Comparison
+
+| Approach | Description |
+|-----------|-------------|
+| Week 4 Baseline | Manual rule-based prioritization |
+| Random Forest | Supervised machine learning classifier |
+
+The evaluation showed that the Random Forest classifier provided a more informative ranking strategy for identifying potentially declining pages.
+
+### Feature Importance
+
+The feature importance analysis indicates that search performance metrics contributed most to the model's predictions. Features such as impressions, clicks, click-through rate (CTR), average search position, and engagement-related metrics were among the strongest contributors.
+
+The figure below summarizes the relative importance of each feature.
+
+![Feature Importance](figures/feature_importance.png)
+
+These feature importance values describe how much each variable contributed to the model's predictions within this dataset. They should not be interpreted as evidence that any individual feature causes a page to improve or decline.
