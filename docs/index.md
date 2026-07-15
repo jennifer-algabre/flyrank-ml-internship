@@ -83,6 +83,6 @@ The feature importance analysis indicates that search performance metrics contri
 
 The figure below summarizes the relative importance of each feature.
 
-![Feature Importance](figures/feature_importance.png)
+![Feature Importance](../work/figures/feature_importance.png)
 
 These feature importance values describe how much each variable contributed to the model's predictions within this dataset. They should not be interpreted as evidence that any individual feature causes a page to improve or decline.
