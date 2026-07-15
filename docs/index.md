@@ -13,3 +13,14 @@ Content teams often manage thousands of pages, making it difficult to determine 
 The objective is not to predict Google's ranking algorithm. Instead, the goal is to identify pages that show observable patterns associated with declining performance so they can be reviewed earlier by SEO specialists and content teams.
 
 This work follows the **Refresh / Content Opportunity Scoring** lane of the FlyRank Machine Learning Internship.
+
+## Data
+
+This project uses the anonymized **FlyRank ML Internship dataset**, which contains historical search performance and content-level signals collected from production SEO environments. The dataset was designed for educational and research purposes, with all client identifiers pseudonymized to protect privacy.
+
+The analysis focuses on the **Refresh / Content Opportunity Scoring** lane. Each row represents a single content page and includes observable search performance metrics such as impressions, clicks, click-through rate (CTR), average search position, engagement rate, scroll rate, content age, and update history.
+
+For this project, pages were classified using the provided **trend_direction** field. A binary label was created where pages with a **"down"** trend were treated as declining content. Fields that directly describe the outcome, such as **trend_pct**, were excluded from the feature set to avoid data leakage.
+
+No client names, website URLs, search queries, or other sensitive production information were used in this research.
+
