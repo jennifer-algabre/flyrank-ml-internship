@@ -82,6 +82,7 @@ The evaluation showed that the Random Forest classifier provided a more informat
 The feature importance analysis indicates that search performance metrics contributed most to the model's predictions. Features such as impressions, clicks, click-through rate (CTR), average search position, and engagement-related metrics were among the strongest contributors.
 
 The figure below summarizes the relative importance of each feature.
+![Feature Importance](../work/figures/feature_importance.png)
 
 ---
 
@@ -96,6 +97,4 @@ Second, the target label is based on the observed `trend_direction` field. While
 Third, the validation strategy focuses on predictive performance within the provided dataset. Results may differ when applied to new websites, industries, or future search environments.
 
 For these reasons, the model should be viewed as a **decision-support tool** that helps content teams prioritize review efforts. Final decisions should always involve human judgment and additional business context.
-![Feature Importance](../work/figures/feature_importance.png)
-
 These feature importance values describe how much each variable contributed to the model's predictions within this dataset. They should not be interpreted as evidence that any individual feature causes a page to improve or decline.
