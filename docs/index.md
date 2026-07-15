@@ -83,6 +83,19 @@ The feature importance analysis indicates that search performance metrics contri
 
 The figure below summarizes the relative importance of each feature.
 
+---
+
+## Limitations & Honest Framing
+
+This study demonstrates that historical search performance signals can be used to prioritize content for review, but several limitations should be considered.
+
+First, the model was trained on anonymized historical data and does not capture external factors such as Google algorithm updates, competitor actions, seasonality, or business priorities. These factors may influence content performance but are not represented in the available features.
+
+Second, the target label is based on the observed `trend_direction` field. While this provides a practical proxy for identifying declining pages, it should not be interpreted as evidence that any individual feature causes a page to improve or decline.
+
+Third, the validation strategy focuses on predictive performance within the provided dataset. Results may differ when applied to new websites, industries, or future search environments.
+
+For these reasons, the model should be viewed as a **decision-support tool** that helps content teams prioritize review efforts. Final decisions should always involve human judgment and additional business context.
 ![Feature Importance](../work/figures/feature_importance.png)
 
 These feature importance values describe how much each variable contributed to the model's predictions within this dataset. They should not be interpreted as evidence that any individual feature causes a page to improve or decline.
