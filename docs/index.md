@@ -82,7 +82,7 @@ The evaluation showed that the Random Forest classifier provided a more informat
 The feature importance analysis indicates that search performance metrics contributed most to the model's predictions. Features such as impressions, clicks, click-through rate (CTR), average search position, and engagement-related metrics were among the strongest contributors.
 
 The figure below summarizes the relative importance of each feature.
-![Feature Importance](../work/figures/feature_importance.png)
+![Feature Importance](feature_importance.png)
 
 ---
 
