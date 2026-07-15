@@ -8,11 +8,11 @@ Maintaining high-performing content is an ongoing challenge because search perfo
 
 ## Introduction
 
-Content teams often manage thousands of pages, making it difficult to determine which pages deserve attention first. Rather than reviewing every page manually, this project explores whether machine learning can prioritize content using historical search performance metrics.
+Content teams often manage thousands of pages, making it challenging to identify which pages should be reviewed and improved first. Manually evaluating every page does not scale well, creating a need for a structured approach that can help prioritize content review.
 
-The objective is not to predict Google's ranking algorithm. Instead, the goal is to identify pages that show observable patterns associated with declining performance so they can be reviewed earlier by SEO specialists and content teams.
+This project explores whether machine learning can use observable search performance signals to identify pages that may require a content refresh. The goal is not to predict Google's ranking algorithm or automate SEO decisions, but to provide decision support that helps human reviewers focus their attention on pages with signals associated with declining performance.
 
-This work follows the **Refresh / Content Opportunity Scoring** lane of the FlyRank Machine Learning Internship.
+This work follows the Refresh / Content Opportunity Scoring lane of the FlyRank Machine Learning Internship. The case study focuses on building a ranked review queue that combines model predictions with interpretable reason codes, allowing content teams to investigate potential improvement opportunities more efficiently.
 
 ## Data
 
