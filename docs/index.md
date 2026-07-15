@@ -24,3 +24,40 @@ For this project, pages were classified using the provided **trend_direction** f
 
 No client names, website URLs, search queries, or other sensitive production information were used in this research.
 
+## Methodology
+
+The project follows a supervised machine learning workflow to prioritize content pages that may benefit from a content refresh.
+
+### Feature Engineering
+
+The feature set consists of observable search performance and content metrics that are available before a refresh decision is made. These include:
+
+- Impressions (90-day)
+- Clicks (90-day)
+- Click-through rate (CTR)
+- Average search position
+- Engagement rate
+- Scroll rate
+- Word count
+- Content age
+- Days since last update
+- Search volume
+- Competition
+
+Missing numerical values were imputed using the median, while additional indicator variables were created to preserve information about missing content-related fields.
+
+### Label Definition
+
+The target label was derived from the `trend_direction` field. Pages labeled **"down"** were assigned a value of 1 (declining), while all other trend categories were assigned 0.
+
+### Baseline
+
+Before training a machine learning model, a rule-based baseline was created using manually selected search performance signals. This provided a simple benchmark for comparison.
+
+### Model Selection
+
+A Random Forest classifier was selected because it can model non-linear relationships between multiple search performance features while remaining relatively interpretable through feature importance analysis. Compared with a single decision tree, Random Forest generally provides more stable predictions by combining multiple decision trees.
+
+### Validation
+
+An 80/20 stratified train-test split was used to preserve the class distribution between training and testing data. Additional validation considered potential feature leakage by excluding outcome-derived variables such as `trend_pct`. Model claims are presented as observed predictive performance rather than evidence of causal relationships.
